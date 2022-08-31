@@ -31,8 +31,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0, 0.2);
-  mix-blend-mode: color;
-  mix-blend-mode: hue;
+  /* mix-blend-mode: color; */
   z-index: 50;
 }
 .content {
@@ -77,7 +76,6 @@ body {
 
 .content button img {
   width: 100%;
-
 }
 
 .content .weather-details {
@@ -125,7 +123,7 @@ body {
   display: flex;
   align-items: center;
   width:100%;
-  margin-top: 3rem;
+  margin-top: 7vh;
   gap: 20px;
   color: #fff;
 }
@@ -151,4 +149,127 @@ body {
 }
 .details span img {
   width: 50px;
+}
+
+
+@media screen and (max-width: 920px) {
+
+  .content {
+    left: 0;
+    top: 65%;
+    width: 100%;
+    height: 35%;
+    overflow: hidden;
+  }
+  .content input {
+    height: 40px;
+    padding: 5px;
+    margin-left: 40px;
+  }
+  .content button {
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 70px;
+    padding: 20px;
+  }
+  .content button:hover {
+    background-color: rgba(100, 129, 120, 0.5);
+  }
+  
+  .content button img {
+    width: 100%;
+    transform: rotate(90deg);
+  }
+  .content .weather-details {
+    top: 0;
+    left: 50%;
+    width: 50%;
+    padding-right: 50px;
+   }
+   .content .weather-details p {
+    margin-bottom: 2vh;
+   }
+   .content .weather-details span {
+    margin-top: 3.5vh;
+  }
+  .details {
+    width:50%;
+    margin-top: 5vh;
+  }
+}
+
+@media  screen and (max-width: 820px) {
+  .content input {
+      width: 200px;
+  }
+
+}
+
+@media screen and (max-width: 680px) { 
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+  }
+  .content .weather-details p {
+    display: none;
+   }
+   .content input {
+    width: 70%;
+    height: 50px;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid lightgray;
+  }
+  .details {
+    width: 100%;
+    gap:0;
+    justify-content: space-between;
+  }
+  .details h1 {
+    font-size: 7rem;
+  }
+  .details h3 {
+    display: none;
+  }
+  .content button {
+    padding: 20px;
+    top:10px;
+    background-color:transparent;
+  }
+  .content button:hover {
+    background-color:transparent;
+  }
+  .content .weather-details {
+    position: absolute; 
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    align-items: center;
+    border: 1px solid lightgray;
+    background-color: rgba(255, 254, 254, 0.395);
+    border-radius: 20px;
+    left: 5%;
+    top: 80%;
+    width: 90%;
+    height: 15%;
+   }
+   .content .weather-details span {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 0;
+  }
+  .content .weather-details span h5 {
+    color: #fff;
+    font-weight: 300;
+  }
+  .content .weather-details span h6 {
+    font-weight: 500;
+  }
 }
