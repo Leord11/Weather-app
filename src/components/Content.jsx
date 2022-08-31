@@ -43,7 +43,7 @@ const Content = () => {
         setError('');
         setIsPending(true);
         setContent('');
-        fetch('http://api.weatherapi.com/v1/current.json?key=85bc3210e7b5435fa0095936222407&q='+ location, signal).then(response => {
+        fetch('https://api.weatherapi.com/v1/current.json?key=85bc3210e7b5435fa0095936222407&q='+ location, signal).then(response => {
             console.log(response);
             if(!response.ok) {
                 if(response.status === 400) {
