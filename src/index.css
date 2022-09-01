@@ -248,7 +248,7 @@ body {
     position: absolute; 
     display: flex;
     justify-content: space-between;
-    padding-left: 10%;
+    padding: 0 10%;
     align-items: center;
     border: 1px solid lightgray;
     background-color: rgba(255, 254, 254, 0.395);
